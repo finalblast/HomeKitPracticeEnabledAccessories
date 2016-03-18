@@ -13,6 +13,7 @@
 		504E998B1C9BF5200082E5C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 504E998A1C9BF5200082E5C0 /* Images.xcassets */; };
 		504E998E1C9BF5200082E5C0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 504E998C1C9BF5200082E5C0 /* LaunchScreen.xib */; };
 		504E999A1C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504E99991C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessoriesTests.swift */; };
+		504E99A41C9BFECB0082E5C0 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504E99A31C9BFECB0082E5C0 /* HomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		504E99931C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeKitPracticeEnabledAccessoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		504E99981C9BF5200082E5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		504E99991C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessoriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitPracticeEnabledAccessoriesTests.swift; sourceTree = "<group>"; };
+		504E99A31C9BFECB0082E5C0 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		504E99A51C9BFECB0082E5C0 /* HomeKitPracticeEnabledAccessories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HomeKitPracticeEnabledAccessories.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504E99A41C9BFECB0082E5C0 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 		504E99751C9BF5200082E5C0 = {
 			isa = PBXGroup;
 			children = (
+				504E99A31C9BFECB0082E5C0 /* HomeKit.framework */,
 				504E99801C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessories */,
 				504E99961C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessoriesTests */,
 				504E997F1C9BF5200082E5C0 /* Products */,
@@ -77,6 +82,7 @@
 		504E99801C9BF5200082E5C0 /* HomeKitPracticeEnabledAccessories */ = {
 			isa = PBXGroup;
 			children = (
+				504E99A51C9BFECB0082E5C0 /* HomeKitPracticeEnabledAccessories.entitlements */,
 				504E99831C9BF5200082E5C0 /* AppDelegate.swift */,
 				504E99851C9BF5200082E5C0 /* ViewController.swift */,
 				504E99871C9BF5200082E5C0 /* Main.storyboard */,
@@ -161,6 +167,12 @@
 				TargetAttributes = {
 					504E997D1C9BF5200082E5C0 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = T23PE6R3CV;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					504E99921C9BF5200082E5C0 = {
 						CreatedOnToolsVersion = 6.1;
@@ -336,9 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HomeKitPracticeEnabledAccessories/HomeKitPracticeEnabledAccessories.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HomeKitPracticeEnabledAccessories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -346,9 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HomeKitPracticeEnabledAccessories/HomeKitPracticeEnabledAccessories.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HomeKitPracticeEnabledAccessories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -405,6 +425,7 @@
 				504E999F1C9BF5200082E5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		504E99A01C9BF5200082E5C0 /* Build configuration list for PBXNativeTarget "HomeKitPracticeEnabledAccessoriesTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +434,7 @@
 				504E99A21C9BF5200082E5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
